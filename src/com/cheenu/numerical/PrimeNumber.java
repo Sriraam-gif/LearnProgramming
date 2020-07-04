@@ -17,12 +17,12 @@ public class PrimeNumber
         long num=in.nextLong();
         in.close();
         long start=System.currentTimeMillis();
-        String rel=checkprime(num);
+        String rel= version2(num);
         long end=System.currentTimeMillis();
         System.out.println(rel);
         System.out.println("Time: "+(end-start)+ " milliseconds");
     }
-    public static String checkprime(long a)
+    public static String version2(long a)
     {
         String mol="Prime number";
         long i=2;
@@ -44,4 +44,23 @@ public class PrimeNumber
         return mol;
 
     }
+
+
+    public static String version1(long a)
+    {
+        String mol="Prime number";
+        long i=2;
+        while(i<=a/2)
+        {
+            if(a%i==0)
+            {
+                mol="Not prime";
+                break;
+            }
+            i++;
+        }
+        return mol;
+
+    }
+
 }
