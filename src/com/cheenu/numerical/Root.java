@@ -1,4 +1,4 @@
-package com.company;
+package com.cheenu.numerical;
 import java.util.*;
 
 /**
@@ -6,7 +6,7 @@ import java.util.*;
  *
  * @author sriraam
  */
-public class Main
+public class Root
 {
 
     public static void main(String[] args)
