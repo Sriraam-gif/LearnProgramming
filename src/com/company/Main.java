@@ -1,12 +1,16 @@
 package com.company;
 import java.util.*;
+
+/**
+ * This is a program which takes a number n and a power p and finds the pth root of n
+ *
+ * @author sriraam
+ */
 public class Main
 {
 
     public static void main(String[] args)
     {
-	// write your code here
-
         Scanner in=new Scanner(System.in);
         System.out.println("Enter a number: ");
         double num=in.nextDouble();
