@@ -9,7 +9,6 @@ import java.util.List;
  *
  * Precondition: 1) There shouldn't be a space after a comma, full stop, semi colon etc.
  * 2) There should be a full stop at the end of a string.
- * 3) The code is case sensitive.
  *
  * Postcondition: The program returns the word which occurs often in a given paragraph.
  *
@@ -20,14 +19,14 @@ public class CommonWord
 {
     public static void main(String[] args)
     {
-        String word="Dantes";
-        String para1="Partial fraction decomposition is the process of starting with the simplified answer and taking it back apart,of decomposing the final expression into its initial polynomial fractions.";
+        String word="dAntes";
+        String para1="Lot Thank give Share Give ";
         String para = "In 1815,Edmond Dantes,a young merchant Sailor who has recently been granted the succession of his captain Leclère,returns to Marseille to marry his Catalan fiancée Mercédès.";
         long start=System.currentTimeMillis();
         System.out.println("Word Occuring the most: "+CommonWord(para1));
         long end=System.currentTimeMillis();
         System.out.println("Time taken: "+(end-start)+" milliseconds");
-
+        System.out.println(DoesWordOccurInPara(para, word));
     }
     public static boolean DoesWordOccurInPara(String para, String word)
     {
@@ -39,7 +38,7 @@ public class CommonWord
             if(Character.isWhitespace(cur) || cur==',' || cur=='.' || cur==';' || cur==':' || cur=='-' || cur=='(' || cur==')')
             {
                 String split=para.substring(a, i);
-                if(split.equals(word))
+                if(split.equalsIgnoreCase(word))
                 {
                     return true;
                 }
@@ -74,7 +73,7 @@ public class CommonWord
             {
                 String k1=list.get(k);
                 String j1=list.get(j);
-                if (k1.equals(j1))
+                if (k1.equalsIgnoreCase(j1))
                 {
                     count++;
                 }
