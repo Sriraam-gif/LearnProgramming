@@ -19,14 +19,12 @@ public class CommonWord
 {
     public static void main(String[] args)
     {
-        String word="dAntes";
         String para1="Lot Thank give Share Give ";
         String para = "In 1815,Edmond Dantes,a young merchant Sailor who has recently been granted the succession of his captain Leclère,returns to Marseille to marry his Catalan fiancée Mercédès.";
         long start=System.currentTimeMillis();
         System.out.println("Word Occuring the most: "+CommonWord(para1));
         long end=System.currentTimeMillis();
         System.out.println("Time taken: "+(end-start)+" milliseconds");
-        System.out.println(DoesWordOccurInPara(para, word));
     }
     public static boolean DoesWordOccurInPara(String para, String word)
     {
